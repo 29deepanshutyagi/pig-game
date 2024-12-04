@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    /* Incremental Compilation */
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", 
+
+    /* Language Features */
+    "target": "ES2020",                          // Specify ECMAScript target version
+    "useDefineForClassFields": true,             // Ensures `define` behavior for class fields
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],    // Standard library + DOM types
+    "module": "ESNext",                          // Use ESNext for modern module system
+    "moduleResolution": "bundler",              // Optimize for bundlers like Vite, Webpack
+    "allowImportingTsExtensions": true,          // Allow explicit .ts/.tsx imports
+    "moduleDetection": "force",                  // Force explicit modules (no script mode)
+    "jsx": "react-jsx",                          // Use React's modern JSX runtime
+    "esModuleInterop": true,                     // Allows default imports from CommonJS modules
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* Output Options */
+    "outDir": "./dist",                          // Output directory for compiled files
+    "rootDir": "./src",                          // Root directory of source files
+    "noEmit": true,                              // Do not emit output files (use bundler)
+
+    /* Linting & Safety */
+    "strict": true,                              // Enable all strict type-checking options
+    "noUnusedLocals": true,                      // Report unused variables
+    "noUnusedParameters": true,                  // Report unused function parameters
+    "noImplicitReturns": true,                   // Ensure all code paths return a value
+    "noFallthroughCasesInSwitch": true,          // Prevent fall-through in switch statements
+
+    /* Code Quality */
+    "isolatedModules": true,                     // Ensure each file can be compiled independently
+    "skipLibCheck": true,                        // Skip type checks for libraries
+    "forceConsistentCasingInFileNames": true,    // Enforce consistent casing in imports
+    "allowSyntheticDefaultImports": true,        // Allow default imports in ES modules
+
+    /* Experimental Options */
+    "experimentalDecorators": true,              // Enable experimental decorators (e.g., @decorators)
+    "emitDecoratorMetadata": true,               // Emit metadata for decorators
+
+    /* Type Checking */
+    "typeRoots": ["./node_modules/@types"],      // Specify type definitions
+    "allowJs": false,                            // Disallow JavaScript files in the project
+    "checkJs": false,                            // Disable type checking for .js files
+    "strictNullChecks": true,                    // Ensure null and undefined are handled
+    "noImplicitAny": true,                       // Raise error for implicit `any` types
+    "noImplicitThis": true                       // Ensure `this` is typed
+  },
+  "include": ["src"],                            // Files to include in the compilation
+  "exclude": ["node_modules", "dist"],           // Files/directories to exclude
+  "compileOnSave": false                         // Disable on-save compilation in editors
+}
